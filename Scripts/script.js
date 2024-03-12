@@ -140,21 +140,21 @@ async function getMovieById(id='tt0848228'){
 
 //{show movie data in cards}
 async function showMovieData(value){
-    let results = document.querySelector('#results');
+    let results = document.querySelector('.search-results');
     let data = await searchMovies(value);
     console.log(data);
     let cards = "";
     
     for(let i in data){
-        let x = data[i];
-        // let x = await getMovieById(id);
+        let id = data[i]['imdb_id'];
+        let x = await getMovieById(id);
 
 
 
-        cards += `<div class="flip-card" id = ${x['id']}>
+        cards += `<div class="flip-card" id = ${x['imdb_id']}>
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img id="movie-poster" src=https://image.tmdb.org/t/p/w500${x['poster_path']} alt="${x['title']}">
+                                <img id="movie-poster" src=${x['banner']} alt="${x['title']}">
                             </div>
                             <div class="flip-card-back">
                                 <p class="title" id="movie-title">${x['title']}</p>
