@@ -423,3 +423,15 @@ p {
   text-decoration: underline;
   cursor:pointer;
 }
+
+.first .header{
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.first{
+  display: none;
+}
+
