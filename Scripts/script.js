@@ -72,7 +72,7 @@ function carouselPosters(data) {
 
 //{top box office movies API}
 async function topBoxOffice() {
-    const url = 'https://moviesverse1.p.rapidapi.com/top-box-office';
+    const url = 'https://moviesverse1.p.rapidapi.com/top-box-office-movies';
     const options = {
         method: 'GET',
         headers: {
