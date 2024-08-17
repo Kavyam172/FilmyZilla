@@ -65,7 +65,7 @@ function carouselPosters(data) {
     let movies = data['movies'];
     let posters = document.querySelectorAll('.poster');
     for (let i = 0; i < 10; i++) {
-        posters[i].src = movies[i]['posterImage'];
+        posters[i].src = movies[i]['image'];
     }
 
 }
